@@ -18,14 +18,14 @@
 </head>
 <body>
   <main>
-    <img src="./images/logo.svg" alt="snap logo"> <!-- 1 -->
+    <img class="logo" src="./images/logo.svg" alt="snap logo"> <!-- 1 -->
     <div class="navigation-wrapper"> <!-- 2 -->
       <nav>
           <div class="features">
-            <a href="#"">Features</a>
-            <img src="./images/icon-arrow-down.svg" alt="down arrow">
-            <img class="hide" src="./images/icon-arrow-up.svg" alt="up arrow">
-            <div class="features-dropdown">
+            <a href="#">Features</a>
+            <img class="in" src="./images/icon-arrow-down.svg" alt="down arrow">
+            <img class="hide in" src="./images/icon-arrow-up.svg" alt="up arrow">
+            <div class="features-dropdown hide">
               <a href="#">Todo List</a> <!-- need the icons -->
               <a href="#">Calendar</a>
               <a href="#">Reminders</a>
@@ -33,31 +33,34 @@
             </div>
           </div>
           <div class="company">
-            <a href="#"">Company</a>
-            <img src="./images/icon-arrow-down.svg" alt="down arrow">
-            <img class="hide" src="./images/icon-arrow-up.svg" alt="up arrow">
-            <div class="company-dropdown">
+            <a href="#">Company</a>
+            <img class="in" src="./images/icon-arrow-down.svg" alt="down arrow">
+            <img class="hide in" src="./images/icon-arrow-up.svg" alt="up arrow">
+            <div class="company-dropdown hide">
               <a href="#">History</a>
               <a href="#">Our Team</a>
               <a href="#">Blog</a>
             </div>
           </div>
-          <a href="#"">Careers</a>
-          <a href="#"">About</a>
+          <a href="#">Careers</a>
+          <a href="#">About</a>
         </nav>
-      <nav>
+      <nav class="credentials">
         <button>Login</button>
-        <button>Register</button>
+        <button class="register">Register</button>
       </nav>
     </div> <!-- end nav wrapper -->
     <div class="copy"> <!-- 3 -->
       <section> 
-        <h1>Make remote work</h1>
+        <div class="copy-inner">
+          <h1><span class="break">Make </span><span class="no-break">remote work</span></h1>
 
-        <p>Get your team in sync, no matter your location. Streamline processes, 
-        create team rituals, and watch productivity soar.</p>
+          <p>Get your team in sync, no matter your location. Streamline processes, 
+          create team rituals, and watch productivity soar.</p>
 
-        <button>Learn more</button>
+          <button>Learn more</button>
+        </div>
+
         <div class="client-icons">
           <img src="./images/client-databiz.svg" alt="databiz logo">
           <img src="./images/client-audiophile.svg" alt="audiophile logo">
