@@ -68,6 +68,8 @@ body {
     padding: 2rem 3rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1em;
 }
 
@@ -114,6 +116,7 @@ main {
     display: grid;
     grid-template-columns: 8rem auto;
     row-gap: 3rem;
+    max-width: 80rem;
 }
 
 .logo {
@@ -134,10 +137,11 @@ main {
     justify-content: center;
     align-items: flex-start;
     gap: 2.5em;
+    
 }
 
 section {
-    margin-top: 6rem;
+    margin-top: 7rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -229,4 +233,94 @@ section button {
 
 button:hover, a:hover {
     cursor: pointer;
+}
+
+section button:hover, section button:focus {
+    background-color: var(--background);
+    color: var(--text-primary);
+    border: 1px solid var(--text-primary);
+}
+nav button:hover, nav button:hover {
+    color: var(--text-primary);
+    border: 1px solid var(--text-primary);
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 620px) {
+    body {
+        padding: 0;
+        
+    }
+    main {
+        width: 100vw;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 0rem;
+    }
+    .mobile {
+        display: inline;
+    }
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        width: 100%;
+    }
+    .copy {
+        grid-column: 1/2; 
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0;
+    }
+
+    .copy-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0.5em;
+        gap: 1.5em;
+        margin-top: -1.5rem;
+    }
+
+    .client-icons {
+       padding: 2rem 0;
+       justify-content: space-around;
+    }
+    .client-icons img {
+        width: 20%;
+        height: auto;
+    }
+    p {
+        font-size: 0.95em;
+        padding-right: 0;
+    }
+    span.break {
+        display: inline;
+    }
+    
+    section {
+        grid-row: 2/3;
+        row-gap: 0;
+    }
+    h1{ 
+        font-size: 2.2em;
+        margin-top: -1em;
+    }
+    .modal { /* the modal */
+        display: none;
+    }
+}
+
+@media (max-width: 410px) {
+    h1{ 
+        font-size: 1.8em;
+        margin-top: -1.5em;
+    }
 }
