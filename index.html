@@ -15,25 +15,63 @@
   </style>
 </head>
 <body>
+  <main>
+    <img src="./images/logo.svg" alt="snap logo"> <!-- 1 -->
+    <div class="navigation-wrapper"> <!-- 2 -->
+      <nav>
+          <div class="features">
+            <a href="#"">Features</a>
+            <img src="./images/icon-arrow-down.svg" alt="down arrow">
+            <img class="hide" src="./images/icon-arrow-up.svg" alt="up arrow">
+            <div class="features-dropdown">
+              <a href="#">Todo List</a> <!-- need the icons -->
+              <a href="#">Calendar</a>
+              <a href="#">Reminders</a>
+              <a href="#">Planning</a>
+            </div>
+          </div>
+          <div class="company">
+            <a href="#"">Company</a>
+            <img src="./images/icon-arrow-down.svg" alt="down arrow">
+            <img class="hide" src="./images/icon-arrow-up.svg" alt="up arrow">
+            <div class="company-dropdown">
+              <a href="#">History</a>
+              <a href="#">Our Team</a>
+              <a href="#">Blog</a>
+            </div>
+          </div>
+          <a href="#"">Careers</a>
+          <a href="#"">About</a>
+        </nav>
+      <nav>
+        <button>Login</button>
+        <button>Register</button>
+      </nav>
+    </div> <!-- end nav wrapper -->
+    <div class="copy"> <!-- 3 -->
+      <section> 
+        <h1>Make remote work</h1>
 
-  Features
-  Company
-  Careers
-  About
+        <p>Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.</p>
 
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
+        <button>Learn more</button>
+        <div class="client-icons">
+          <img src="./images/client-databiz.svg" alt="databiz logo">
+          <img src="./images/client-audiophile.svg" alt="audiophile logo">
+          <img src="./images/client-meet.svg" alt="meet logo">
+          <img src="./images/client-maker.svg" alt="maker logo">
+        </div>
+      </section>
+      <picture>
+        <source media="(max-width: 450px)" srcset="./images/image-hero-mobile.png">
+        <img src="./images/image-hero-desktop.png" alt="man on laptop">
+      </picture>
+    </div>
+  </main>
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://github.com/MooseCowBear">MooseCowBear</a>.
+  </footer>
 </body>
 </html>
