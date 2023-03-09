@@ -181,7 +181,7 @@ section button {
 
  p {
     color: var(--text-secondary);
-    font-size: 1.2vw; /* 0.85em;*/
+    font-size: 1.2vw; 
     padding-right: 1em;
  }
 
@@ -190,6 +190,7 @@ section button {
     justify-content: space-between;
     width: 100%;
 }
+
 .client-icons img {
     width: 20%;
 }
@@ -199,7 +200,7 @@ picture {
 }
 
 .features-dropdown, .company-dropdown {
-    display: none; /* turn to flex when visible */
+    display: none; 
     flex-direction: column;
     font-size: 0.95em;
 }
@@ -271,22 +272,18 @@ a:hover, a:focus {
 .mobile {
     display: none;
 }
-@media (max-width: 1000px) {
-    .copy-inner {
-        gap: 1em;
+
+@media only screen and (max-width: 900px) { 
+    .text, .copy-inner {
+        gap: 0.5em;
     }
 }
-@media (max-width: 900px) {
-    .copy-inner {
-        gap: 0.3em;
-    }
-} 
 
-@media (max-width: 620px) {
+@media only screen and (max-width: 620px) {
     body {
         padding: 0;
-        
     }
+
     main {
         width: 100vw;
         padding: 0;
@@ -294,9 +291,11 @@ a:hover, a:focus {
         grid-template-columns: 1fr;
         row-gap: 0rem;
     }
+
     .mobile {
         display: inline;
     }
+
     .mobile-header {
         display: flex;
         justify-content: space-between;
@@ -304,6 +303,7 @@ a:hover, a:focus {
         width: 100%;
         margin-bottom: 0.5em;
     }
+
     .copy {
         grid-column: 1/2; 
         display: grid;
@@ -321,6 +321,7 @@ a:hover, a:focus {
         padding: 0.5em;
         gap: 2em;
     }
+
     .text {
         gap: 2em;
     }
@@ -329,10 +330,7 @@ a:hover, a:focus {
        padding: 2rem 0;
        justify-content: space-around;
     }
-    .client-icons img {
-        width: 20%;
-        height: auto;
-    }
+
     p {
         font-size: 0.95em;
         padding-right: 0;
@@ -345,12 +343,13 @@ a:hover, a:focus {
         grid-row: 2/3;
         row-gap: 0em;
     }
+
     h1{ 
         font-size: 8vw;
     }
     
     .modal { /* the modal */
-        display: none; /* temp, default will be none */
+        display: none; 
         position: fixed; 
         z-index: 1; 
         left: 0;
@@ -363,7 +362,7 @@ a:hover, a:focus {
     }
 
     .features-dropdown, .company-dropdown {
-        display:flex
+        display: none;
     }
 
     .features-dropdown {
@@ -373,9 +372,6 @@ a:hover, a:focus {
         padding: 1em 2.4em 1em 1.4em;
     }
 
-    .company, .features {
-        align-self: flex-start;
-    }
     .company-dropdown {
         position: relative;
         background-color: transparent;
@@ -390,12 +386,13 @@ a:hover, a:focus {
         height: 100%;
         float: right;
         display: flex;
-        flex-direction: column; /* login and register need to be aligned */
+        flex-direction: column; 
         justify-content: center;
         gap: 1em;
         font-size: 1.4em;
         padding: 1em;
     }
+
     .navigation-wrapper > nav {
         display: flex;
         flex-direction: column;
@@ -403,6 +400,7 @@ a:hover, a:focus {
         width: 100%;
         gap: 1em;
     }
+
     .close {
         display: inline;
         position: absolute;
@@ -414,6 +412,14 @@ a:hover, a:focus {
 
 @media only screen and (max-width: 415px) {
     h1{ 
-        margin-top: -1.8em;
+        margin-top: -1.8em; /* in really small screens, the h1 gets too far away from the image */
     }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
 }
