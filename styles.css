@@ -165,7 +165,6 @@ section button {
  h1{
     font-size: 8vmin;
     font-size: 5vw;
-    /*font-size: clamp(0.3em, 5vw, 4em);*/
     line-height: 1;
  }
 
@@ -381,7 +380,6 @@ nav button:hover, nav button:hover {
         float: right;
         display: flex;
         flex-direction: column; /* login and register need to be aligned */
-        align-content: stretch; /* hmm */
         justify-content: center;
         gap: 1em;
         font-size: 1.4em;
