@@ -10,21 +10,15 @@
   <link rel="stylesheet" href="./styles.css">
   <script src="./script.js" defer></script>
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <main>
     <div class="mobile-header">
-      <img class="logo" src="./images/logo.svg" alt="snap logo"> <!-- 1 -->
+      <img class="logo" src="./images/logo.svg" alt="snap logo"> <!-- grid item 1 -->
       <img class="hamburger mobile" src="./images/icon-menu.svg" alt="menu icon">
     </div>
-    <div class="modal">
-      <div class="navigation-wrapper"> <!-- 2 -->
+    <div class="modal"> <!-- grid item 2 -->
+      <div class="navigation-wrapper"> 
         <img class="close" src="./images/icon-close-menu.svg" alt="close">
         <nav>
             <div class="features">
@@ -34,7 +28,7 @@
               <div class="features-dropdown">
                 <div class="menu-option">
                   <img src="./images/icon-todo.svg" alt="to do list icon">
-                  <a href="#">Todo List</a> <!-- need the icons -->
+                  <a href="#">Todo List</a> 
                 </div>
                 <div class="menu-option">
                   <img src="./images/icon-calendar.svg" alt="calendar icon">
@@ -69,18 +63,16 @@
         </nav>
       </div> <!-- end nav wrapper -->
     </div> <!-- end modal -->
-    <div class="copy"> <!-- 3 -->
+    <div class="copy"> <!-- grid item 3 -->
       <section> 
         <div class="copy-inner">
           <div class="text">
             <h1><span class="break">Make </span><span class="no-break">remote work</span></h1> 
-
             <p>Get your team in sync, no matter your location. Streamline processes, 
             create team rituals, and watch productivity soar.</p>
           </div>
           <button>Learn more</button>
         </div>
-
         <div class="client-icons">
           <img src="./images/client-databiz.svg" alt="databiz logo">
           <img src="./images/client-audiophile.svg" alt="audiophile logo">
