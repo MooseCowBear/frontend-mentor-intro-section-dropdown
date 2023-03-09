@@ -262,6 +262,10 @@ nav button:hover, nav button:hover {
     border: 1px solid var(--text-primary);
 }
 
+a:hover, a:focus {
+    color: var(--text-primary);
+}
+
 .mobile {
     display: none;
 }
