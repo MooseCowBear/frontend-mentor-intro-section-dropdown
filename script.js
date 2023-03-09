@@ -45,15 +45,11 @@ let prevWidth = window.innerWidth;
 
 window.addEventListener("resize", () => {
     const width = window.innerWidth;
-    console.log("widnow resize", width, prevWidth);
     if (width > 620 && prevWidth <= 620){
-        console.log("TURNING ON MODAL");
         modal.style.visibility = "visible";
         prevWidth = width;
-        console.log(prevWidth);
     }
     else if (width <= 620 && prevWidth > 620) {
-        console.log("TRUNGIN OFF MODAL");
         modal.style.visibility = "hidden";
         prevWidth = width;
     }
