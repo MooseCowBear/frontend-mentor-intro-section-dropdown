@@ -98,27 +98,24 @@ img.in.hide {
     align-items: center;
 }
 
-.navigation-wrapper > nav {
+.navigation-wrapper > nav, .credentials {
     font-size: 0.7em;
     display: flex;
     gap: 2.8em;
     align-items: center;
 }
 
-nav > button {
-    color: var(--text-secondary);
-    border: transparent;
-    background-color: var(--background);
-    font-size: 1em;
-}
-
 .register {
     border: 1px solid var(--text-secondary);
     border-radius: 0.9em;
     padding: 0.8em 1.2em;
+    color: var(--text-secondary);
+    background-color: var(--background);
+    font-size: 1em;
 }
 
 main {
+    min-width: 650px;
     display: grid;
     grid-template-columns: 8rem auto;
     row-gap: 1rem;
@@ -287,6 +284,7 @@ a:hover, a:focus {
     }
 
     main {
+        min-width: 0;
         width: 100vw;
         padding: 0;
         display: grid;
@@ -351,7 +349,7 @@ a:hover, a:focus {
     }
     
     .modal { /* the modal */
-        display: none; 
+        visibility: hidden;
         position: fixed; 
         z-index: 1; 
         left: 0;
@@ -390,6 +388,7 @@ a:hover, a:focus {
         display: flex;
         flex-direction: column; 
         justify-content: center;
+        align-items: stretch;
         gap: 1em;
         font-size: 1.4em;
         padding: 1em;
@@ -401,6 +400,17 @@ a:hover, a:focus {
         align-items: stretch;
         width: 100%;
         gap: 1em;
+    }
+
+    .credentials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+        width: 100%;
+    }
+    .register {
+        width: 100%;
     }
 
     .close {
