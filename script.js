@@ -1,24 +1,21 @@
 //for opening, closing dropdowns
-const featuresLink = document.getElementById("features");
-featuresLink.addEventListener("click", () => {
-    console.log("features link clicked");
 
-    toggleDropdown(featuresLink);
+const featuresLink = document.getElementById("features");
+features.addEventListener("click", () => {
+    toggleDropdown(featuresLink.id);
 });
 
 const companyLink = document.getElementById("company");
 companyLink.addEventListener("click", () => {
-    console.log("company link clicked");
-
-    toggleDropdown(companyLink);
+    toggleDropdown(companyLink.id);
 });
 
-function toggleDropdown(dropdownLink) {
-    const dropdown = dropdownLink.querySelector("div");
+function toggleDropdown(id) {
+    const dropdown = document.querySelector(`#${id} ~ div`);
     console.log("dropdown is, ", dropdown);
 
-    const downArrow = dropdownLink.querySelector(".down");
-    const upArrow = dropdownLink.querySelector(".up");
+    const downArrow = document.querySelector(`#${id} ~ .down`);
+    const upArrow = document.querySelector(`#${id} ~ .up`);
 
     downArrow.classList.toggle("hide");
     upArrow.classList.toggle("hide");
