@@ -27,16 +27,34 @@ const modal = document.querySelector(".modal");
 const hamburger = document.querySelector(".hamburger.mobile");
 
 hamburger.addEventListener("click", () => {
-    modal.style.display = "block";
+    modal.style.visibility = "visible";
 });
 
 const closeButton = document.querySelector(".close");
 closeButton.addEventListener("click", () => {
-    modal.style.display = "none";
+    modal.style.visibility = "hidden";
 });
 
 window.addEventListener("click", (event) => {
     if (event.target == modal) {
-      modal.style.display = "none";
+      modal.style.visibility = "hidden";
+    }
+});
+
+let prevWidth = window.innerWidth;
+
+window.addEventListener("resize", () => {
+    const width = window.innerWidth;
+    console.log("widnow resize", width, prevWidth);
+    if (width > 620 && prevWidth <= 620){
+        console.log("TURNING ON MODAL");
+        modal.style.visibility = "visible";
+        prevWidth = width;
+        console.log(prevWidth);
+    }
+    else if (width <= 620 && prevWidth > 620) {
+        console.log("TRUNGIN OFF MODAL");
+        modal.style.visibility = "hidden";
+        prevWidth = width;
     }
 });
