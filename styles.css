@@ -75,6 +75,10 @@ body {
     gap: 1em;
 }
 
+.close {
+    display: none;
+}
+
 a {
     text-decoration: none;
     color: var(--text-secondary);
@@ -370,6 +374,7 @@ nav button:hover, nav button:hover {
     }
 
     .navigation-wrapper { /* modal content */ 
+        position: relative;
         background-color: white;
         width: 60%;
         height: 100%;
@@ -389,7 +394,13 @@ nav button:hover, nav button:hover {
         width: 100%;
         gap: 1em;
     }
-
+    .close {
+        display: inline;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 1em;
+    }
 }
 
 @media only screen and (max-width: 415px) {
